@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="wrap_content">
@@ -18,15 +19,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buyTextBook"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_buyTextBook"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Buy Text Books" />
 
         <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_studyFriends"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Study w/ Friends" />
@@ -39,15 +40,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button13"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_redLion"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Red Lion" />
 
         <Button
-            android:id="@+id/button12"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_studyAlone"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Study Alone" />
@@ -60,15 +61,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_sleep"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Sleep" />
 
         <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_exercise"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Exercise" />
@@ -80,17 +81,18 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button9"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_mckinley"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Go to McKinley" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_work"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            tools:text="Work" />
 
     </LinearLayout>
 
@@ -101,15 +103,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:id="@+id/semesterID"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
+            android:id="@+id/yearID"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
@@ -117,48 +119,48 @@
 
     <TextView
         android:id="@+id/statsText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Stats:" />
 
     <TextView
         android:id="@+id/sanityID"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Sanity:" />
 
     <TextView
         android:id="@+id/MoneyID"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Money:" />
 
     <TextView
         android:id="@+id/educationID"
-        android:layout_width="144dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Education:" />
 
     <TextView
         android:id="@+id/RestlessnessID"
-        android:layout_width="181dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Restlessness:" />
 
     <TextView
         android:id="@+id/healthyID"
-        android:layout_width="146dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Healthy:" />
 
     <Button
-        android:id="@+id/dropoutbtn"
+        android:id="@+id/btn_dropOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
