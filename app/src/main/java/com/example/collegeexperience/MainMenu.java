@@ -17,6 +17,5 @@ public class MainMenu extends AppCompatActivity {
             Intent optionScreen = new Intent(this, OptionScreen.class);
             startActivity(optionScreen);
         });
-        finish();
     }
 }
