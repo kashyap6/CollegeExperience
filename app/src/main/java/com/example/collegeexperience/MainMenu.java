@@ -13,6 +13,10 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         // music
+
+
+
+        /*
         startService(new Intent(this, BackgroundMusicService.class));
         Button music = findViewById(R.id.btn_music);
         music.setOnClickListener (unused -> {
@@ -23,7 +27,11 @@ public class MainMenu extends AppCompatActivity {
                 startService(new Intent(this, BackgroundMusicService.class));
                 music.setText("Music On");
             }
-        });
+        });*/
+
+
+
+
         Button gameStart = findViewById(R.id.startButton);
         gameStart.setOnClickListener (unused -> {
             Intent optionScreen = new Intent(this, OptionScreen.class);

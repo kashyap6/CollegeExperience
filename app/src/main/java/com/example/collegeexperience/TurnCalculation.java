@@ -1,17 +1,18 @@
 package com.example.collegeexperience;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
 public class TurnCalculation extends AppCompatActivity {
-    public static int money = 90;
-    public static int sanity = 80;
-    public static int education = 60;
-    public static int restlessness = 40;
-    public static int health = 90;
-    final static int Parants_give_money = 25;
+    public int money = 90;
+    public int sanity = 80;
+    public int education = 60;
+    public int restlessness = 40;
+    public int health = 90;
+    final int Parants_give_money = 25;
     private Random turncalc = new Random();
 
 
@@ -37,6 +38,75 @@ public class TurnCalculation extends AppCompatActivity {
             //nothing happened
             return "No Event Occured";
         }
+
+    }
+
+    private int thresh = 10;
+    public String turn() {
+        //SPECIAL EVENTS
+
+        //POSITIVE EVENTS
+        int rng = turncalc.nextInt(20);
+        if (rng == 3) {
+            parentmoney();
+            return "You parents decided to send you some money!";
+        } else if (rng == 4) {
+            call();
+            return "Your parents called!";
+        }
+        //THESE ARE ALL OF THE NORMAL STAT CHECKS
+        rng = turncalc.nextInt(6);
+        System.out.println(thresh +" :: " +rng + education/10.0);
+        if (thresh > rng + education/10.0) {
+            popQuiz();
+            return "A Pop Quiz Occured";
+        } else if (thresh > rng + money/10.0) {
+            cantPay();
+            return "Can't afford Spotify and Netflix this month";
+        } else if (thresh > rng + sanity/10.0) {
+            goneMad();
+            return "You went insane";
+        } else if (thresh > rng + restlessness/10.0) {
+            passOut();
+            return "You passed out";
+        } else if (thresh > health/10.0 + rng) {
+            getSick();
+            return "You got sick";
+        } else {
+            return "Nothing special happened";
+        }
+        //first check if stats are 0, if so trigger even always
+        //then use thresholds and rng to see if even will trigger THRESH = 10
+    }
+
+    //EVENT METHODS
+    public void popQuiz() {
+
+    }
+    public void cantPay() {
+
+    }
+    public void goneMad() {
+
+
+    }
+    public void passOut() {
+
+    }
+    public void getSick() {
+
+    }
+    //OTHER EVENTS
+    public void parentmoney() {
+
+    }
+    public void finals() {
+
+    }
+    public void call() {
+
+    }
+    public void cantPayBook() {
 
     }
 }
