@@ -12,9 +12,34 @@ public class OptionScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option_screen);
+        //
+        //Display
+        //
+        TurnCalculation thisGame = new TurnCalculation();
+        TextView sanityButton = (TextView) findViewById(R.id.sanityID);
+        sanityButton.setText("Sanity:\t\t\t\t\t    " + String.valueOf(thisGame.sanity));
+        //
+        TextView moneyButton = (TextView) findViewById(R.id.MoneyID);
+        moneyButton.setText("Money:\t\t\t\t\t  " + String.valueOf(thisGame.money));
+        //
+        TextView restlessnessButton = (TextView) findViewById(R.id.RestlessnessID);
+        restlessnessButton.setText("Restlessness:\t" + String.valueOf(thisGame.restlessness));
+        //
+        TextView educationButton = (TextView) findViewById(R.id.educationID);
+        educationButton.setText("Education:\t\t\t  "+ String.valueOf(thisGame.education));
+        //
+        TextView healthButton = (TextView) findViewById(R.id.healthyID);
+        healthButton.setText("Health:\t\t\t\t\t\t  " + String.valueOf(thisGame.health));
+        //
+        //
+        //
         Button backToMain = findViewById(R.id.btn_dropOut);
         backToMain.setOnClickListener (unused -> {
-            finish();
+            backToMain.setText("Are You Sure?");
+            Button sure = findViewById(R.id.btn_dropOut);
+            sure.setOnClickListener (unuseded -> {
+                finish();
+            });
         });
         Button buy = findViewById(R.id.btn_buyTextBook);
         buy.setOnClickListener (unused -> {

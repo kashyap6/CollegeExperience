@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class TurnCalculation extends AppCompatActivity {
-    public int money = 90;
-    public int sanity = 80;
-    public int education = 60;
-    public int restlessness = 40;
-    public int health = 90;
-    final int Parants_give_money = 25;
+    public static int money = 90;
+    public static int sanity = 80;
+    public static int education = 60;
+    public static int restlessness = 40;
+    public static int health = 90;
+    final static int Parants_give_money = 25;
     private Random turncalc = new Random();
+
 
     public String turnCalculator() {
         int probabilityRange = (int) Math.floor(((25) + (100 - sanity) + (100 - education) + (restlessness)) * 1.36);
