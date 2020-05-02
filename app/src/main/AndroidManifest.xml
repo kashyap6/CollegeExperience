@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".UpdateScreen" />
         <activity android:name=".OptionScreen" />
+
+        <service android:name=".BackgroundMusicService" />
     </application>
 
 </manifest>

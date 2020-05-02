@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/mainmenuscreen"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,4 +18,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Not Feeling It" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="442dp" />
+
+    <Button
+        android:id="@+id/btn_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music On" />
+
 </LinearLayout>
