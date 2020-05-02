@@ -16,18 +16,18 @@ public class MainMenu extends AppCompatActivity {
 
 
 
-        /*
+
         startService(new Intent(this, BackgroundMusicService.class));
         Button music = findViewById(R.id.btn_music);
         music.setOnClickListener (unused -> {
-            if (music.getText().equals("Music On")) {
-                stopService(new Intent(this, BackgroundMusicService.class));
-                music.setText("Music Off");
-            } else if (music.getText().equals("Music Off")) {
-                startService(new Intent(this, BackgroundMusicService.class));
-                music.setText("Music On");
-            }
-        });*/
+                    if (music.getText().equals("Music On")) {
+                        stopService(new Intent(this, BackgroundMusicService.class));
+                        music.setText("Music Off");
+                    } else if (music.getText().equals("Music Off")) {
+                        startService(new Intent(this, BackgroundMusicService.class));
+                        music.setText("Music On");
+                    }
+        });
 
 
 
