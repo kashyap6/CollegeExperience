@@ -15,6 +15,7 @@ public class MainMenu extends AppCompatActivity {
         Button gameStart = findViewById(R.id.startButton);
         gameStart.setOnClickListener (unused -> {
             Intent optionScreen = new Intent(this, OptionScreen.class);
+            TurnCalculation thisGame = new TurnCalculation();
             startActivity(optionScreen);
         });
         Button leaveGame = findViewById(R.id.exitButton);

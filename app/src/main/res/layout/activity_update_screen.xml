@@ -5,10 +5,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/btn_result"
         android:layout_width="match_parent"
         android:layout_height="334dp"
-        android:text="TextView" />
+        android:text="Why Didn't It Work" />
 
     <Button
         android:id="@+id/btn_Proceed"
