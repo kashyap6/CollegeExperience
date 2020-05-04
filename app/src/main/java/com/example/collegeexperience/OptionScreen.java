@@ -20,16 +20,19 @@ public class OptionScreen extends AppCompatActivity {
         if (month == 5) {
             month = 1;
             sem++;
+            sem++;
         }
-        if (sem == 9) {
-            Intent UpdateScreen = new Intent(this, Victory.class);
-            startActivity(UpdateScreen);
+        if (sem >= 9) {
+            Intent victoryScreen = new Intent(this, Victory.class);
+            startActivity(victoryScreen);
             finish();
         }
+        int tempMonth = month;
+        int tempSemester = sem;
         TextView month = (TextView) findViewById(R.id.MonthID);
-        month.setText("Month(1-4):    " + String.valueOf(month));
+        month.setText("Month(1-4):    " + String.valueOf(tempMonth));
         TextView sem = (TextView) findViewById(R.id.semesterID);
-        sem.setText("Semester(1-8):    " + String.valueOf(sem));
+        sem.setText("Semester(1-8):    " + String.valueOf(tempSemester));
         //
         //Display
         //
@@ -139,7 +142,7 @@ public class OptionScreen extends AppCompatActivity {
             thisGame.sanity += 3;
             thisGame.education += 3;
             thisGame.health += 3;
-            thisGame.restlessness += 3;
+            thisGame.restlessness -= 3;
             Toast.makeText(this, "Health+5\nRestlessness-15\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
@@ -169,8 +172,8 @@ public class OptionScreen extends AppCompatActivity {
         Button work = findViewById(R.id.btn_work);
         work.setOnClickListener (unused -> {
             thisGame.money += 15;
-            thisGame.restlessness += 5;
-            thisGame.education -= 3;
+            thisGame.restlessness += 10;
+            thisGame.education -= 5;
             Toast.makeText(this, "Money+15\nRestlessness+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);

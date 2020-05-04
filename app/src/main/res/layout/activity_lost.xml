@@ -16,7 +16,7 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
-        android:layout_height="566dp"
+        android:layout_height="453dp"
         app:srcCompat="@drawable/fail" />
 
     <Button
