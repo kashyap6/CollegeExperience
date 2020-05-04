@@ -118,7 +118,7 @@ public class TurnCalculation extends AppCompatActivity {
     public void parentmoney() {
         money += 5;
     }
-    public void finals() {
+    /**public void finals() {
         int passFail = turncalc.nextInt(101);
         if (passFail > education) {
             Intent lostScreen = new Intent(this, Lost.class);
@@ -129,7 +129,7 @@ public class TurnCalculation extends AppCompatActivity {
             sanity = sanity + 5;
             restlessness = restlessness - 3;
         }
-    }
+    }**/
     public void call() {
         money = money + 5;
     }
