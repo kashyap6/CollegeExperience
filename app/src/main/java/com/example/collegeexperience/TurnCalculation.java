@@ -58,20 +58,17 @@ public class TurnCalculation extends AppCompatActivity {
         //THESE ARE ALL OF THE NORMAL STAT CHECKS
         rng = turncalc.nextInt(6);
         System.out.println(thresh +" :: " +rng + education/10.0);
-        if (thresh > rng + education/10.0) {
+        if (thresh > rng + education/7.5) {
             return popQuiz();
         } else if (money < 20 && thresh > rng + money/10.0) {
-            cantPay();
-            return "Can't afford Spotify and Netflix this month";
-        } else if (thresh > rng + sanity/10.0) {
-            goneMad();
-            return "You went insane";
-        } else if (thresh > rng + restlessness/10.0) {
+            return cantPay();
+        } else if (thresh > rng + sanity/6.5) {
+            return goneMad();
+        } else if (thresh > rng + restlessness/6.5) {
             passOut();
             return "You passed out";
         } else if (thresh > health/10.0 + rng) {
-            getSick();
-            return "You got sick";
+            return getSick();
         } else {
             return "Nothing special happened";
         }
@@ -86,37 +83,39 @@ public class TurnCalculation extends AppCompatActivity {
             education = education - 5;
             sanity = sanity - 8;
             health = health - 3;
-            return "You failed a Pop Quiz \n Your education and sanity went down";
+            return "You failed a Pop Quiz \n Your education and sanity went down \n education - 5 \n sanity - 8 \n health - 3";
         } else {
             education = education + 3;
             sanity = sanity + 5;
             restlessness = restlessness - 3;
-            return "You had a Pop Quiz and passed!";
+            return "You had a Pop Quiz and passed! \n education + 3 \n sanity + 5 \n restlessness - 3";
         }
     }
-    public void cantPay() {
+    public String cantPay() {
         sanity = sanity - 3;
-        //return "You couldn't afford Netflix and Sportify \n Your sanity went down";
+        return "You couldn't afford Netflix and Sportify \n Your sanity went down \n Sanity - 3";
     }
-    public void goneMad() {
+    public String goneMad() {
         sanity = sanity - 10;
-        health = health -5;
-        //return "You went mad \n Your health and sanity took a plundge";
+        health = health - 5;
+        return "You went mad \n Your health and sanity took a plundge \n sanity - 10 \n health - 5";
     }
-    public void passOut() {
+    public String passOut() {
         restlessness = restlessness - 3;
         education = education - 8;
         health = health - 3;
-        //return "You passed out in class \n Your teacher is mad";
+        return "You passed out in class \n Your teacher is mad \n restlessness - 3 \n education - 8 \n health - 3";
     }
-    public void getSick() {
+    public String getSick() {
         health = health - 10;
         restlessness = restlessness + 5;
         education = education - 3;
+        return "You made best friends with a toilet, get better \n health - 10 \n restlessness + 5 \n education - 3";
     }
     //OTHER EVENTS
-    public void parentmoney() {
+    public String parentmoney() {
         money += 5;
+        return "Your parents called and gave you money$$ \n money + 5";
     }
     /**public void finals() {
         int passFail = turncalc.nextInt(101);
@@ -130,10 +129,12 @@ public class TurnCalculation extends AppCompatActivity {
             restlessness = restlessness - 3;
         }
     }**/
-    public void call() {
-        money = money + 5;
+    public String call() {
+        sanity = sanity + 5;
+        return "You parents checked up on their little angel \n Sanity + 5";
     }
-    public void cantPayBook() {
+    public String cantPayBook() {
         education = education - 10;
+        return "You couldn't pay for books, You hope theres a pdf online \n Education - 10";
     }
 }
