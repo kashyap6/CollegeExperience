@@ -60,7 +60,7 @@ public class TurnCalculation extends AppCompatActivity {
         System.out.println(thresh +" :: " +rng + education/10.0);
         if (thresh > rng + education/10.0) {
             return popQuiz();
-        } else if (thresh > rng + money/10.0) {
+        } else if (money < 20 && thresh > rng + money/10.0) {
             cantPay();
             return "Can't afford Spotify and Netflix this month";
         } else if (thresh > rng + sanity/10.0) {
