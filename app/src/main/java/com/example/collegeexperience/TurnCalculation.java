@@ -58,8 +58,7 @@ public class TurnCalculation extends AppCompatActivity {
         rng = turncalc.nextInt(6);
         System.out.println(thresh +" :: " +rng + education/10.0);
         if (thresh > rng + education/10.0) {
-            popQuiz();
-            return "A Pop Quiz Occured";
+            return popQuiz();
         } else if (thresh > rng + money/10.0) {
             cantPay();
             return "Can't afford Spotify and Netflix this month";
@@ -80,21 +79,39 @@ public class TurnCalculation extends AppCompatActivity {
     }
 
     //EVENT METHODS
-    public void popQuiz() {
-
+    public String popQuiz() {
+        int passFail = turncalc.nextInt(101);
+        if (passFail > education) {
+            education = education - 5;
+            sanity = sanity - 8;
+            health = health - 3;
+            //return "You failed a Pop Quiz \n Your education and sanity went down";
+        } else {
+            education = education + 3;
+            sanity = sanity + 5;
+            restlessness = restlessness - 3;
+            //return "You had a Pop Quiz and passed!";
+        }
     }
     public void cantPay() {
-
+        sanity = sanity - 3;
+        //return "You couldn't afford Netflix and Sportify \n Your sanity went down";
     }
     public void goneMad() {
-
-
+        sanity = sanity - 10;
+        health = health -5;
+        //return "You went mad \n Your health and sanity took a plundge";
     }
     public void passOut() {
-
+        restlessness = restlessness - 3;
+        education = education - 8;
+        health = health - 3;
+        //return "You passed out in class \n Your teacher is mad";
     }
     public void getSick() {
-
+        health = health - 10;
+        restlessness = restlessness + 5;
+        education = education - 3;
     }
     //OTHER EVENTS
     public void parentmoney() {
