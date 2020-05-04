@@ -104,15 +104,17 @@
 
         <TextView
             android:id="@+id/semesterID"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="temp" />
 
         <TextView
             android:id="@+id/MonthID"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="temp" />
     </LinearLayout>
 
     <TextView
