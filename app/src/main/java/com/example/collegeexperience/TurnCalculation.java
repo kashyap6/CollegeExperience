@@ -64,7 +64,7 @@ public class TurnCalculation extends AppCompatActivity {
             return cantPay();
         } else if (thresh > rng + sanity/6.5) {
             return goneMad();
-        } else if (thresh > rng + restlessness/6.5) {
+        } else if (thresh < rng + restlessness/6.5) {
             return passOut();
         } else if (thresh > health/10.0 + rng) {
             return getSick();
