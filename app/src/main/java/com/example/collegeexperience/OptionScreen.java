@@ -21,7 +21,8 @@ public class OptionScreen extends AppCompatActivity {
         if (thisGame.sanity > 100) {
             thisGame.sanity = 100;
         } else if (thisGame.sanity < 0) {
-            thisGame.sanity = 0;
+            Intent UpdateScreen = new Intent(this, Lost.class);
+            startActivity(UpdateScreen);
         }
         TextView sanityButton = (TextView) findViewById(R.id.sanityID);
         sanityButton.setText("Sanity:\t\t\t\t\t    " + String.valueOf(thisGame.sanity));
@@ -29,7 +30,8 @@ public class OptionScreen extends AppCompatActivity {
         if (thisGame.money > 100) {
             thisGame.money = 100;
         } else if (thisGame.money < 0) {
-            thisGame.money = 0;
+            Intent UpdateScreen = new Intent(this, Lost.class);
+            startActivity(UpdateScreen);
         }
         TextView moneyButton = (TextView) findViewById(R.id.MoneyID);
         moneyButton.setText("Money:\t\t\t\t\t  " + String.valueOf(thisGame.money));
@@ -37,7 +39,8 @@ public class OptionScreen extends AppCompatActivity {
         if (thisGame.restlessness > 100) {
             thisGame.restlessness = 100;
         } else if (thisGame.restlessness < 0) {
-            thisGame.restlessness = 0;
+            Intent UpdateScreen = new Intent(this, Lost.class);
+            startActivity(UpdateScreen);
         }
         TextView restlessnessButton = (TextView) findViewById(R.id.RestlessnessID);
         restlessnessButton.setText("Restlessness:\t" + String.valueOf(thisGame.restlessness));
@@ -45,7 +48,8 @@ public class OptionScreen extends AppCompatActivity {
         if (thisGame.education > 100) {
             thisGame.education = 100;
         } else if (thisGame.education < 0) {
-            thisGame.education = 0;
+            Intent UpdateScreen = new Intent(this, Lost.class);
+            startActivity(UpdateScreen);
         }
         TextView educationButton = (TextView) findViewById(R.id.educationID);
         educationButton.setText("Education:\t\t\t  "+ String.valueOf(thisGame.education));
@@ -53,7 +57,8 @@ public class OptionScreen extends AppCompatActivity {
         if (thisGame.health > 100) {
             thisGame.health = 100;
         } else if (thisGame.health < 0) {
-            thisGame.health = 0;
+            Intent UpdateScreen = new Intent(this, Lost.class);
+            startActivity(UpdateScreen);
         }
         TextView healthButton = (TextView) findViewById(R.id.healthyID);
         healthButton.setText("Health:\t\t\t\t\t\t  " + String.valueOf(thisGame.health));
