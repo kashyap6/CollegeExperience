@@ -10,17 +10,32 @@ import android.widget.Toast;
 
 public class OptionScreen extends AppCompatActivity {
     public static TurnCalculation thisGame = new TurnCalculation();
+    public static int month = 0;
+    public static int sem = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option_screen);
+        month++;
+        if (month == 5) {
+            month = 1;
+            sem++;
+        }
+        if (sem == 8) {
+            Intent UpdateScreen = new Intent(this, Victory.class);
+            startActivity(UpdateScreen);
+            finish();
+        }
+        TextView month = (TextView) findViewById(R.id.MonthID);
+        month.setText("Month(1-4):\t\t    " + month);
+
         //
         //Display
         //
         //TurnCalculation thisGame = new TurnCalculation();
         if (thisGame.sanity > 100) {
             thisGame.sanity = 100;
-        } else if (thisGame.sanity < 0) {
+        } else if (thisGame.sanity <= 0) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
@@ -29,7 +44,7 @@ public class OptionScreen extends AppCompatActivity {
         //
         if (thisGame.money > 100) {
             thisGame.money = 100;
-        } else if (thisGame.money < 0) {
+        } else if (thisGame.money <= 0) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
@@ -38,7 +53,7 @@ public class OptionScreen extends AppCompatActivity {
         //
         if (thisGame.restlessness > 100) {
             thisGame.restlessness = 100;
-        } else if (thisGame.restlessness < 0) {
+        } else if (thisGame.restlessness <= 0) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
@@ -47,7 +62,7 @@ public class OptionScreen extends AppCompatActivity {
         //
         if (thisGame.education > 100) {
             thisGame.education = 100;
-        } else if (thisGame.education < 0) {
+        } else if (thisGame.education <= 0) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
@@ -56,7 +71,7 @@ public class OptionScreen extends AppCompatActivity {
         //
         if (thisGame.health > 100) {
             thisGame.health = 100;
-        } else if (thisGame.health < 0) {
+        } else if (thisGame.health <= 0) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
