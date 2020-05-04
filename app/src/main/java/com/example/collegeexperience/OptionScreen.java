@@ -21,7 +21,7 @@ public class OptionScreen extends AppCompatActivity {
             month = 1;
             sem++;
         }
-        if (sem == 8) {
+        if (sem == 9) {
             Intent UpdateScreen = new Intent(this, Victory.class);
             startActivity(UpdateScreen);
             finish();
