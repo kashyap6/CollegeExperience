@@ -27,9 +27,9 @@ public class OptionScreen extends AppCompatActivity {
             finish();
         }
         TextView month = (TextView) findViewById(R.id.MonthID);
-        month.setText("Month(1-4):    " + month);
+        month.setText("Month(1-4):    " + String.valueOf(month));
         TextView sem = (TextView) findViewById(R.id.semesterID);
-        sem.setText("Semester(1-8):    " + sem);
+        sem.setText("Semester(1-8):    " + String.valueOf(sem));
         //
         //Display
         //
