@@ -27,9 +27,9 @@ public class OptionScreen extends AppCompatActivity {
             finish();
         }
         TextView month = (TextView) findViewById(R.id.MonthID);
-        month.setText("Month(1-4):\t\t    " + month);
+        month.setText("Month(1-4):    " + month);
         TextView sem = (TextView) findViewById(R.id.semesterID);
-        sem.setText("Semester(1-8):\t\t    " + sem);
+        sem.setText("Semester(1-8):    " + sem);
         //
         //Display
         //
@@ -131,10 +131,15 @@ public class OptionScreen extends AppCompatActivity {
         });
         Button sleep = findViewById(R.id.btn_sleep);
         sleep.setOnClickListener (unused -> {
-            thisGame.restlessness -= 15;
+            /*thisGame.restlessness -= 15;
             thisGame.sanity += 5;
             thisGame.health += 5;
-            thisGame.education -= 3;
+            thisGame.education -= 3;*/
+            thisGame.money += 3;
+            thisGame.sanity += 3;
+            thisGame.education += 3;
+            thisGame.health += 3;
+            thisGame.restlessness += 3;
             Toast.makeText(this, "Health+5\nRestlessness-15\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
