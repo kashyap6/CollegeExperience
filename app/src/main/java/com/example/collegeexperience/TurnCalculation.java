@@ -1,4 +1,5 @@
 package com.example.collegeexperience;
+import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -118,12 +119,21 @@ public class TurnCalculation extends AppCompatActivity {
         money += 5;
     }
     public void finals() {
-
+        int passFail = turncalc.nextInt(101);
+        if (passFail > education) {
+            Intent lostScreen = new Intent(this, Lost.class);
+            startActivity(lostScreen);
+            finish();
+        } else {
+            education = education + 3;
+            sanity = sanity + 5;
+            restlessness = restlessness - 3;
+        }
     }
     public void call() {
-
+        money = money + 5;
     }
     public void cantPayBook() {
-
+        education = education - 10;
     }
 }
