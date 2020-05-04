@@ -85,12 +85,12 @@ public class TurnCalculation extends AppCompatActivity {
             education = education - 5;
             sanity = sanity - 8;
             health = health - 3;
-            //return "You failed a Pop Quiz \n Your education and sanity went down";
+            return "You failed a Pop Quiz \n Your education and sanity went down";
         } else {
             education = education + 3;
             sanity = sanity + 5;
             restlessness = restlessness - 3;
-            //return "You had a Pop Quiz and passed!";
+            return "You had a Pop Quiz and passed!";
         }
     }
     public void cantPay() {
