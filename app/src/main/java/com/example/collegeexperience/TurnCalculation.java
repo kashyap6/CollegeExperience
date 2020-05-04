@@ -52,7 +52,7 @@ public class TurnCalculation extends AppCompatActivity {
             return "You parents decided to send you some money!";
         } else if (rng == 4) {
             call();
-            return "Your parents called!";
+            return "Your parents called!\n\n\nMoney+5";
         }
         //THESE ARE ALL OF THE NORMAL STAT CHECKS
         rng = turncalc.nextInt(6);
@@ -98,7 +98,7 @@ public class TurnCalculation extends AppCompatActivity {
     }
     //OTHER EVENTS
     public void parentmoney() {
-
+        money += 5;
     }
     public void finals() {
 
