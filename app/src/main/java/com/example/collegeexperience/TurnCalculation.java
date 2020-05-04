@@ -17,7 +17,7 @@ public class TurnCalculation extends AppCompatActivity {
     private Random turncalc = new Random();
 
 
-    public String turnCalculator() {
+    /**public String turnCalculator() {
         int probabilityRange = (int) Math.floor(((25) + (100 - sanity) + (100 - education) + (restlessness)) * 1.36);
         System.out.println(probabilityRange);
         int turnNumber = turncalc.nextInt(probabilityRange);
@@ -40,7 +40,7 @@ public class TurnCalculation extends AppCompatActivity {
             return "No Event Occured";
         }
 
-    }
+    }**/
 
     private int thresh = 10;
     public String turn() {
@@ -65,8 +65,7 @@ public class TurnCalculation extends AppCompatActivity {
         } else if (thresh > rng + sanity/6.5) {
             return goneMad();
         } else if (thresh > rng + restlessness/6.5) {
-            passOut();
-            return "You passed out";
+            return passOut();
         } else if (thresh > health/10.0 + rng) {
             return getSick();
         } else {
