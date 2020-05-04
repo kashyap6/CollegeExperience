@@ -17,6 +17,9 @@ public class Lost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost);
         Button play = findViewById(R.id.playagain);
+        OptionScreen.thisGame = new TurnCalculation();
+        OptionScreen.month = 0;
+        OptionScreen.sem = 1;
         play.setOnClickListener (unused -> {
             Intent UpdateScreen = new Intent(this, MainMenu.class);
             startActivity(UpdateScreen);
