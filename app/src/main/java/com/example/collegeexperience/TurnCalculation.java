@@ -49,7 +49,7 @@ public class TurnCalculation extends AppCompatActivity {
         int rng = turncalc.nextInt(20);
         if (rng == 3) {
             parentmoney();
-            return "You parents decided to send you some money!";
+            return "You parents decided to send you some money!\n\nYou Gained\nMoney+5";
         } else if (rng == 4) {
             call();
             return "Your parents called!\n\n\nMoney+5";
