@@ -51,9 +51,9 @@ public class OptionScreen extends AppCompatActivity {
         TextView moneyButton = (TextView) findViewById(R.id.MoneyID);
         moneyButton.setText("Money:\t\t\t\t\t  " + String.valueOf(thisGame.money));
         //
-        if (thisGame.restlessness > 100) {
-            thisGame.restlessness = 100;
-        } else if (thisGame.restlessness <= 0) {
+        if (thisGame.restlessness < 0) {
+            thisGame.restlessness = 0;
+        } else if (thisGame.restlessness >= 100) {
             Intent UpdateScreen = new Intent(this, Lost.class);
             startActivity(UpdateScreen);
         }
@@ -101,8 +101,8 @@ public class OptionScreen extends AppCompatActivity {
         studyFriends.setOnClickListener (unused -> {
             thisGame.education += 3;
             thisGame.sanity += 5;
-            thisGame.restlessness -= 10;
-            Toast.makeText(this, "Education+3\nRestlessness-10\nSanity+5",Toast.LENGTH_SHORT).show();
+            thisGame.restlessness += 10;
+            Toast.makeText(this, "Education+3\nRestlessness+10\nSanity+5",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
             finish();
@@ -121,20 +121,20 @@ public class OptionScreen extends AppCompatActivity {
         Button studyAlone = findViewById(R.id.btn_studyAlone);
         studyAlone.setOnClickListener (unused -> {
             thisGame.education += 10;
-            thisGame.restlessness -= 9;
+            thisGame.restlessness += 9;
             thisGame.sanity -= 10;
-            Toast.makeText(this, "Education+10\nRestlessness-9\nSanity-10",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Education+10\nRestlessness+9\nSanity-10",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
             finish();
         });
         Button sleep = findViewById(R.id.btn_sleep);
         sleep.setOnClickListener (unused -> {
-            thisGame.restlessness += 15;
+            thisGame.restlessness -= 15;
             thisGame.sanity += 5;
             thisGame.health += 5;
             thisGame.education -= 3;
-            Toast.makeText(this, "Health+5\nRestlessness+15\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Health+5\nRestlessness-15\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
             finish();
@@ -143,9 +143,9 @@ public class OptionScreen extends AppCompatActivity {
         excersie.setOnClickListener (unused -> {
             thisGame.sanity += 5;
             thisGame.health += 10;
-            thisGame.restlessness -= 10;
+            thisGame.restlessness += 10;
             thisGame.education -= 3;
-            Toast.makeText(this, "Health+10\nRestlessness-10\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Health+10\nRestlessness+10\nSanity+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
             finish();
@@ -163,9 +163,9 @@ public class OptionScreen extends AppCompatActivity {
         Button work = findViewById(R.id.btn_work);
         work.setOnClickListener (unused -> {
             thisGame.money += 15;
-            thisGame.restlessness -= 5;
+            thisGame.restlessness += 5;
             thisGame.education -= 3;
-            Toast.makeText(this, "Money+15\nRestlessness-5\nEducation-3",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Money+15\nRestlessness+5\nEducation-3",Toast.LENGTH_SHORT).show();
             Intent UpdateScreen = new Intent(this, UpdateScreen.class);
             startActivity(UpdateScreen);
             finish();
